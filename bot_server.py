@@ -56,7 +56,7 @@ if not BOT_TOKEN:
 
 API_URL = f'https://api.telegram.org/bot{BOT_TOKEN}'
 
-DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///./data.db')
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///./db.sqlite3')
 REDIS_URL = os.getenv('REDIS_URL')  # optional but recommended
 
 # PLAN_CHANNELS can be provided as JSON in env or hard-coded as fallback

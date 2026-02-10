@@ -1,26 +1,3 @@
-"""
-Production-ready Telegram VIP Bot (single-file example)
-- Flask app exposing /webhook and /payment_webhook
-- SQLAlchemy for DB (use DATABASE_URL env var, default sqlite for quick start)
-- Background jobs via RQ (Redis) if REDIS_URL provided, otherwise ThreadPoolExecutor fallback
-- Robust error handling, logging, request timeouts, retries
-- Use environment variables for secrets (BOT_TOKEN, DATABASE_URL, REDIS_URL)
-- Designed to run under gunicorn: `gunicorn telegram_vip_bot_production:app`
-
-NOTE: This is a minimal-but-production-minded example. For real production use,
-- run Redis (for background jobs)
-- use PostgreSQL (DATABASE_URL)
-- configure HTTPS at platform (Render, Heroku, DigitalOcean)
-- rotate tokens and secure environment variables
-
-Files you'll want alongside this:
-- requirements.txt
-- Procfile (web: gunicorn telegram_vip_bot_production:app)
-- worker Procfile or service to run: rq worker default
-- optional: Dockerfile
-
-"""
-
 import os
 import json
 import time
